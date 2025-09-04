@@ -1,0 +1,1265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nhlalala Mukansi - Digital Designer</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.47059;
+            color: #1d1d1f;
+            background: #fbfbfd;
+            overflow-x: hidden;
+            font-weight: 400;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+       
+        /* Apple-style Navigation */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(251, 251, 253, 0.8);
+            backdrop-filter: saturate(180%) blur(20px);
+            z-index: 1000;
+            border-bottom: 0.5px solid rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            height: 44px;
+        }
+
+        nav .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 44px;
+            padding: 0 22px;
+        }
+
+        .logo {
+            font-size: 21px;
+            font-weight: 600;
+            color: #1d1d1f;
+            letter-spacing: -0.022em;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 40px;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #1d1d1f;
+            font-size: 17px;
+            font-weight: 400;
+            letter-spacing: -0.022em;
+            transition: opacity 0.3s ease;
+            cursor: pointer;
+        }
+
+        .nav-links a:hover {
+            opacity: 0.8;
+        }
+
+        .mobile-menu {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+        }
+
+        .mobile-menu span {
+            width: 18px;
+            height: 1px;
+            background: #1d1d1f;
+            margin: 3px 0;
+            transition: 0.3s;
+        }
+
+        /* Apple-style Hero Section 
+        .hero {
+            padding: 180px 0 120px;
+            text-align: center;
+            background: linear-gradient(135deg, #fbfbfd 0%, #f5f5f7 100%);
+            position: relative;
+        }*/
+        
+        .hero {
+            padding: 180px 0 120px;
+            text-align: center;
+            position: relative;
+            background: 
+            linear-gradient(rgba(251, 251, 253, 0.85), rgba(245, 245, 247, 0.85)),
+            url("Untitled%20design.jpg") center/cover no-repeat;
+            background-attachment: fixed;
+            }
+        
+
+}
+
+
+        .hero-content h1 {
+            font-size: 80px;
+            font-weight: 600;
+            letter-spacing: -0.015em;
+            color: #1d1d1f;
+            margin-bottom: 8px;
+            line-height: 1.05;
+        }
+
+        .hero-gradient-text {
+            background: linear-gradient(135deg, #007aff 0%, #5856d6 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .hero-subtitle {
+            font-size: 28px;
+            font-weight: 400;
+            color: #86868b;
+            margin-bottom: 40px;
+            letter-spacing: -0.005em;
+        }
+
+        .hero-description {
+            font-size: 21px;
+            color: #1d1d1f;
+            max-width: 800px;
+            margin: 0 auto 60px;
+            font-weight: 400;
+            letter-spacing: -0.016em;
+            line-height: 1.381;
+        }
+
+        /* Apple-style Buttons */
+        .cta-buttons {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .btn {
+            padding: 12px 24px;
+            border: none;
+            border-radius: 980px;
+            font-size: 17px;
+            font-weight: 400;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 44px;
+            letter-spacing: -0.022em;
+        }
+
+        .btn-primary {
+            background: #007aff;
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background: #0056cc;
+            transform: scale(0.98);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: #007aff;
+            border: 1px solid #007aff;
+        }
+
+        .btn-secondary:hover {
+            background: #007aff;
+            color: white;
+            transform: scale(0.98);
+        }
+
+        /* Apple-style Sections */
+        .section {
+            padding: 100px 0;
+        }
+
+        .section-alt {
+            background: #f5f5f7;
+        }
+
+        .section-title {
+            font-size: 48px;
+            font-weight: 600;
+            text-align: center;
+            margin-bottom: 20px;
+            color: #1d1d1f;
+            letter-spacing: -0.003em;
+        }
+
+        .section-subtitle {
+            font-size: 21px;
+            color: #86868b;
+            text-align: center;
+            margin-bottom: 80px;
+            font-weight: 400;
+            letter-spacing: -0.016em;
+        }
+
+        /* About Section */
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 80px;
+            align-items: center;
+        }
+
+        .about-text {
+            font-size: 21px;
+            color: #1d1d1f;
+            line-height: 1.381;
+            letter-spacing: -0.016em;
+        }
+
+        .about-text p {
+            margin-bottom: 20px;
+        }
+
+        .skills-container {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 30px;
+        }
+
+        .skill-group {
+            background: white;
+            padding: 40px;
+            border-radius: 18px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+            border: 0.5px solid rgba(0, 0, 0, 0.04);
+        }
+
+        .skill-group h3 {
+            font-size: 19px;
+            font-weight: 600;
+            color: #1d1d1f;
+            margin-bottom: 16px;
+            letter-spacing: -0.012em;
+        }
+
+        .skill-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .skill-item {
+            background: #f5f5f7;
+            color: #1d1d1f;
+            padding: 6px 12px;
+            border-radius: 100px;
+            font-size: 14px;
+            font-weight: 400;
+        }
+
+        /* Experience Section */
+        .experience-timeline {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .timeline-item {
+            background: white;
+            padding: 40px;
+            margin-bottom: 30px;
+            border-radius: 18px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+            border: 0.5px solid rgba(0, 0, 0, 0.04);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .timeline-item:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 12px 40px rgba(0, 0, 0, 0.1);
+        }
+
+        .timeline-date {
+            font-size: 14px;
+            color: #007aff;
+            font-weight: 500;
+            margin-bottom: 8px;
+            text-transform: uppercase;
+            letter-spacing: 0.6px;
+        }
+
+        .timeline-title {
+            font-size: 24px;
+            font-weight: 600;
+            color: #1d1d1f;
+            margin-bottom: 4px;
+            letter-spacing: -0.009em;
+        }
+
+        .timeline-company {
+            font-size: 17px;
+            color: #86868b;
+            margin-bottom: 16px;
+            font-weight: 400;
+        }
+
+        .timeline-description {
+            font-size: 17px;
+            color: #1d1d1f;
+            line-height: 1.47059;
+            letter-spacing: -0.022em;
+        }
+
+        .timeline-description ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .timeline-description li {
+            position: relative;
+            padding-left: 20px;
+            margin-bottom: 8px;
+        }
+
+        .timeline-description li:before {
+            content: '•';
+            color: #007aff;
+            position: absolute;
+            left: 0;
+            font-weight: bold;
+        }
+
+        /* Education Section */
+        .education-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 40px;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .education-item {
+            background: white;
+            padding: 40px;
+            border-radius: 18px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+            border: 0.5px solid rgba(0, 0, 0, 0.04);
+        }
+
+        .education-period {
+            font-size: 14px;
+            color: #007aff;
+            font-weight: 500;
+            margin-bottom: 8px;
+            text-transform: uppercase;
+            letter-spacing: 0.6px;
+        }
+
+        .education-degree {
+            font-size: 21px;
+            font-weight: 600;
+            color: #1d1d1f;
+            margin-bottom: 8px;
+            letter-spacing: -0.016em;
+        }
+
+        .education-school {
+            font-size: 17px;
+            color: #86868b;
+            margin-bottom: 16px;
+        }
+
+        .education-details {
+            font-size: 17px;
+            color: #1d1d1f;
+            line-height: 1.47059;
+        }
+
+        /* Projects Section */
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 40px;
+        }
+
+        .project-card {
+            background: white;
+            border-radius: 18px;
+            overflow: hidden;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+            border: 0.5px solid rgba(0, 0, 0, 0.04);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .project-card:hover {
+            transform: translateY(-12px);
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.12);
+        }
+
+        /*.project-image {
+            height: 220px;
+            background: linear-gradient(135deg, #007aff 0%, #5856d6 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 48px;
+        }*/
+        
+        .project-image {
+  height: 225px;                      /* vertical block height */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #fff;                   /* keep it clean or light gray */
+  overflow: hidden;
+  border-bottom: 1px solid #eee;      /* optional divider */
+}
+
+.project-image img {
+  max-width: 100%;                    /* scale down to fit horizontally */
+  max-height: 100%;                   /* scale down to fit vertically */
+  object-fit: contain;                /* keep full image, don’t crop */
+  padding: 10px;                      /* optional breathing space */
+}
+
+
+        .project-content {
+            padding: 30px;
+        }
+
+        .project-title {
+            font-size: 21px;
+            font-weight: 600;
+            color: #1d1d1f;
+            margin-bottom: 12px;
+            letter-spacing: -0.016em;
+        }
+
+        .project-description {
+            font-size: 17px;
+            color: #1d1d1f;
+            line-height: 1.47059;
+            margin-bottom: 20px;
+        }
+
+        .project-tech {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .tech-tag {
+            background: #f5f5f7;
+            color: #1d1d1f;
+            padding: 6px 12px;
+            border-radius: 100px;
+            font-size: 14px;
+        }
+
+        /* Certifications Section */
+        .certifications-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 24px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .certification-item {
+            background: white;
+            padding: 24px;
+            border-radius: 12px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.04);
+            border: 0.5px solid rgba(0, 0, 0, 0.04);
+            text-align: center;
+        }
+
+        .certification-name {
+            font-size: 17px;
+            font-weight: 500;
+            color: #1d1d1f;
+            margin-bottom: 4px;
+        }
+
+        .certification-provider {
+            font-size: 14px;
+            color: #86868b;
+        }
+
+        /* Contact Section */
+        .contact {
+            background: #1d1d1f;
+            color: white;
+            text-align: center;
+        }
+
+        .contact .section-title {
+            color: white;
+        }
+
+        .contact .section-subtitle {
+            color: #86868b;
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 60px;
+            margin: 60px 0;
+        }
+
+        .contact-item {
+            text-align: center;
+        }
+
+        .contact-icon {
+            width: 60px;
+            height: 60px;
+            background: #007aff;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+            font-size: 24px;
+        }
+
+        .contact-title {
+            font-size: 17px;
+            font-weight: 600;
+            margin-bottom: 8px;
+            color: white;
+        }
+
+        .contact-detail {
+            font-size: 17px;
+            color: #86868b;
+        }
+
+        /* Interests Section */
+        .interests-list {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            flex-wrap: wrap;
+        }
+
+        .interest-item {
+            background: white;
+            padding: 20px 30px;
+            border-radius: 100px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.04);
+            font-size: 17px;
+            font-weight: 500;
+            color: #1d1d1f;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 1024px) {
+            .hero-content h1 {
+                font-size: 64px;
+            }
+            
+            .about-grid {
+                grid-template-columns: 1fr;
+                gap: 60px;
+            }
+
+            .skills-container {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+                position: absolute;
+                top: 44px;
+                left: 0;
+                width: 100%;
+                background: rgba(251, 251, 253, 0.95);
+                backdrop-filter: saturate(180%) blur(20px);
+                flex-direction: column;
+                padding: 20px;
+                gap: 20px;
+                border-bottom: 0.5px solid rgba(0, 0, 0, 0.1);
+            }
+
+            .nav-links.active {
+                display: flex;
+            }
+
+            .mobile-menu {
+                display: flex;
+            }
+
+            .hero {
+                padding: 120px 0 80px;
+            }
+
+            .hero-content h1 {
+                font-size: 48px;
+            }
+
+            .hero-subtitle {
+                font-size: 21px;
+            }
+
+            .hero-description {
+                font-size: 17px;
+            }
+
+            .section-title {
+                font-size: 32px;
+            }
+
+            .section-subtitle {
+                font-size: 17px;
+            }
+
+            .cta-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .education-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .projects-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .contact-grid {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+
+            .interests-list {
+                flex-direction: column;
+                align-items: center;
+                gap: 20px;
+            }
+        }
+
+        /* Animations */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s ease;
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .slide-in-left {
+            opacity: 0;
+            transform: translateX(-50px);
+            transition: all 0.8s ease;
+        }
+
+        .slide-in-left.visible {
+            opacity: 1;
+            transform: translateX(0);
+        }
+
+        .slide-in-right {
+            opacity: 0;
+            transform: translateX(50px);
+            transition: all 0.8s ease;
+        }
+
+        .slide-in-right.visible {
+            opacity: 1;
+            transform: translateX(0);
+        }
+    </style>
+</head>
+<body>
+    <!-- Apple-style Navigation -->
+    <nav id="nav">
+        <div class="container">
+            <div class="logo">NM</div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#education">Education</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="mobile-menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Apple-style Hero Section -->
+    <section id="home" class="hero">
+        <div class="container">
+            <div class="hero-content fade-in">
+                <h1>Hello, I'm <span class="hero-gradient-text">Nhlalala Mukansi</span></h1>
+                <div class="hero-subtitle">Digital Designer & Full-Stack Developer</div>
+                <p class="hero-description">
+                    A dedicated and innovative designer bringing significant experience in creating 
+                    user-centered digital solutions. I thrive in both independent and team settings, 
+                    leveraging expertise to optimize processes and enhance user experiences.
+                </p>
+                <div class="cta-buttons">
+                    <a href="#projects" class="btn btn-primary">View My Work</a>
+                    <a href="#contact" class="btn btn-secondary">Get In Touch</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section">
+        <div class="container">
+            <h2 class="section-title fade-in">About</h2>
+            <p class="section-subtitle fade-in">Passionate about continuous growth and innovation</p>
+            
+            <div class="about-grid">
+                <div class="about-text slide-in-left">
+                    <p>With strong communication, problem-solving, and organizational skills, I am adaptable, eager to learn, and driven to exceed expectations in every project.</p>
+                    <p>My passion for continuous growth and innovation makes me a valuable asset to any forward-thinking team. I bring significant experience collaborating with organizations to deliver user-centered digital solutions.</p>
+                    <p>Currently pursuing a Bachelor of Science in Informatics with coursework in Human-Computer Interaction, Programming, and Business Management.</p>
+                </div>
+                
+                <div class="skills-container slide-in-right">
+                    <div class="skill-group">
+                        <h3>Web Development</h3>
+                        <div class="skill-list">
+                            <span class="skill-item">HTML</span>
+                            <span class="skill-item">CSS3</span>
+                            <span class="skill-item">JavaScript</span>
+                            <span class="skill-item">React JS</span>
+                            <span class="skill-item">Django</span>
+                            <span class="skill-item">MySQL</span>
+                        </div>
+                    </div>
+                    
+                    <div class="skill-group">
+                        <h3>UI/UX Design</h3>
+                        <div class="skill-list">
+                            <span class="skill-item">Canva</span>
+                            <span class="skill-item">Figma</span>
+                            <span class="skill-item">Prototyping</span>
+                            <span class="skill-item">Wireframing</span>
+                            <span class="skill-item">Video Production</span>
+                        </div>
+                    </div>
+                    
+                    <div class="skill-group">
+                        <h3>Programming</h3>
+                        <div class="skill-list">
+                            <span class="skill-item">C++</span>
+                            <span class="skill-item">Python</span>
+                            <span class="skill-item">Visual Basic</span>
+                        </div>
+                    </div>
+                    
+                    <div class="skill-group">
+                        <h3>Digital Marketing</h3>
+                        <div class="skill-list">
+                            <span class="skill-item">SEO</span>
+                            <span class="skill-item">Social Media Strategy</span>
+                            <span class="skill-item">Content Creation</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="section section-alt">
+        <div class="container">
+            <h2 class="section-title fade-in">Experience</h2>
+            <p class="section-subtitle fade-in">Professional journey and achievements</p>
+            
+            <div class="experience-timeline">
+                <div class="timeline-item fade-in">
+                    <div class="timeline-date">June 2025 - Present</div>
+                    <div class="timeline-title">Web Developer</div>
+                    <div class="timeline-company">Cloud Tech Synergy (Contract)</div>
+                    <div class="timeline-description">
+                        <ul>
+                            <li>Designed, developed, and maintained the company website to enhance user experience</li>
+                            <li>Executed digital marketing and SEO strategies, boosting traffic and engagement</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="timeline-item fade-in">
+                    <div class="timeline-date">March 2025 - May 2025</div>
+                    <div class="timeline-title">Graphic Designer</div>
+                    <div class="timeline-company">AFX Trust</div>
+                    <div class="timeline-description">
+                        <ul>
+                            <li>Created promotional graphics and video content to strengthen brand messaging</li>
+                            <li>Designed marketing materials aligned with corporate identity</li>
+                            <li>Collaborated with teams to develop visuals for campaigns and presentations</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="timeline-item fade-in">
+                    <div class="timeline-date">January 2025 - March 2025</div>
+                    <div class="timeline-title">Social Media & Marketing Manager</div>
+                    <div class="timeline-company">Proficient Software Solutions (Pty) Ltd</div>
+                    <div class="timeline-description">
+                        <ul>
+                            <li>Developed and executed data-driven campaigns that increased engagement</li>
+                            <li>Analysed performance metrics to optimize campaign ROI</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="timeline-item fade-in">
+                    <div class="timeline-date">October 2024 - February 2025</div>
+                    <div class="timeline-title">UI/UX Designer</div>
+                    <div class="timeline-company">Catalyst FX Dynamics</div>
+                    <div class="timeline-description">
+                        <ul>
+                            <li>Led a team in designing intuitive web & mobile interfaces, improving usability</li>
+                            <li>Oversaw project planning, prototyping, and quality assurance for design projects</li>
+                            <li>Produced promotional videos and motion graphics to boost product visibility</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="timeline-item fade-in">
+                    <div class="timeline-date">November 2023 - December 2023</div>
+                    <div class="timeline-title">Property Administrator</div>
+                    <div class="timeline-company">Rent 360 (Seasonal)</div>
+                    <div class="timeline-description">
+                        <ul>
+                            <li>Managed tenant inquiries and ensured effective communication with management</li>
+                            <li>Processed rent payments and followed up on overdue accounts</li>
+                            <li>Acted as first point of contact, maintaining positive tenant relations</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="timeline-item fade-in">
+                    <div class="timeline-date">November 2022 - January 2023</div>
+                    <div class="timeline-title">Bar Support Assistant</div>
+                    <div class="timeline-company">C4 Grill Lounge (Seasonal)</div>
+                    <div class="timeline-description">
+                        <ul>
+                            <li>Maintained stock levels and ensured optimal bar operations</li>
+                            <li>Assisted with drink service, delivering excellent customer experience</li>
+                            <li>Supported staff in a fast-paced environment to meet service demands</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education" class="section">
+        <div class="container">
+            <h2 class="section-title fade-in">Education</h2>
+            <p class="section-subtitle fade-in">Academic background and qualifications</p>
+            
+            <div class="education-grid">
+                <div class="education-item fade-in">
+                    <div class="education-period">January 2024 - Present</div>
+                    <div class="education-degree">Bachelor of Science in Informatics</div>
+                    <div class="education-school">University of South Africa (2nd Year)</div>
+                    <div class="education-details">
+                        Relevant coursework in Human-Computer Interaction, Programming and Business Management.
+                    </div>
+                </div>
+                
+                <div class="education-item fade-in">
+                    <div class="education-period">2017 - 2019</div>
+                    <div class="education-degree">National Senior Certificate</div>
+                    <div class="education-school">Nghonyama High School</div>
+                    <div class="education-details">
+                        Graduated with a 74% average. Specialized in Science and Maths.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Certifications Section -->
+    <section class="section section-alt">
+        <div class="container">
+            <h2 class="section-title fade-in">Certifications</h2>
+            <p class="section-subtitle fade-in">Professional development and training</p>
+            
+            <div class="certifications-grid">
+                <div class="certification-item fade-in">
+                    <div class="certification-name">Full-Stack Development</div>
+                    <div class="certification-provider">IT Varsity</div>
+                </div>
+                <div class="certification-item fade-in">
+                    <div class="certification-name">Web Design</div>
+                    <div class="certification-provider">Udemy</div>
+                </div>
+                <div class="certification-item fade-in">
+                    <div class="certification-name">Graphic Design Essentials</div>
+                    <div class="certification-provider">Canva</div>
+                </div>
+                <div class="certification-item fade-in">
+                    <div class="certification-name">Digital Marketing</div>
+                    <div class="certification-provider">Udemy</div>
+                </div>
+                <div class="certification-item fade-in">
+                    <div class="certification-name">Financial Literacy Training</div>
+                    <div class="certification-provider">ABSA</div>
+                </div>
+                <div class="certification-item fade-in">
+                    <div class="certification-name">Executive Diploma in Technology Management</div>
+                    <div class="certification-provider">MTF Institute</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="section">
+        <div class="container">
+            <h2 class="section-title fade-in">Projects</h2>
+            <p class="section-subtitle fade-in">Featured work and case studies</p>
+            
+            <div class="projects-grid">
+                <div class="project-card fade-in">
+                    <div class="project-image"><img src="1.png"></div>
+                    <div class="project-content">
+                        <h3 class="project-title">Web Interface Design</h3>
+                        <p class="project-description">Led a team in designing intuitive web & mobile interfaces, improving usability through user-centered design principles.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Figma</span>
+                            <span class="tech-tag">Prototyping</span>
+                            <span class="tech-tag">Wireframing</span>
+                            <span class="tech-tag">UI/UX</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card fade-in">
+                    <div class="project-image"><img src="LOGO.jpg"></div>
+                    <div class="project-content">
+                        <h3 class="project-title">Corporate Website Development</h3>
+                        <p class="project-description">Designed, developed, and maintained company websites with enhanced user experience, implementing SEO strategies and modern web technologies.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">React JS</span>
+                            <span class="tech-tag">Django</span>
+                            <span class="tech-tag">MySQL</span>
+                            <span class="tech-tag">SEO</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card fade-in">
+                    <div class="project-image"><img src="introducing.jpg"></div>
+                    <div class="project-content">
+                        <h3 class="project-title">Video Production & Motion Graphics</h3>
+                        <p class="project-description">Produced promotional videos and motion graphics to boost product visibility and strengthen brand messaging across digital platforms.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Video Production</span>
+                            <span class="tech-tag">Motion Graphics</span>
+                            <span class="tech-tag">Canva</span>
+                            <span class="tech-tag">Branding</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card fade-in">
+                    <div class="project-image"><img src="Untitled%20design%20(2).jpg"></div>
+                    <div class="project-content">
+                        <h3 class="project-title">Digital Marketing Campaigns</h3>
+                        <p class="project-description">Developed and executed data-driven marketing campaigns with performance analytics, achieving increased engagement and optimized ROI.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Social Media Strategy</span>
+                            <span class="tech-tag">Content Creation</span>
+                            <span class="tech-tag">Analytics</span>
+                            <span class="tech-tag">SEO</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card fade-in">
+                    <div class="project-image"><img src="A4%20POSTER.jpg"></div>
+                    <div class="project-content">
+                        <h3 class="project-title">Corporate Identity Design</h3>
+                        <p class="project-description">Created comprehensive brand identity systems with promotional graphics and marketing materials aligned with corporate values.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Graphic Design</span>
+                            <span class="tech-tag">Brand Identity</span>
+                            <span class="tech-tag">Marketing Materials</span>
+                            <span class="tech-tag">Visual Design</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card fade-in">
+                    <div class="project-image"><img src="team.jpg"></div>
+                    <div class="project-content">
+                        <h3 class="project-title">Process Optimization Solutions</h3>
+                        <p class="project-description">Implemented system optimizations and quality assurance processes for design projects, improving workflow efficiency and team collaboration.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Project Management</span>
+                            <span class="tech-tag">Quality Assurance</span>
+                            <span class="tech-tag">Process Optimization</span>
+                            <span class="tech-tag">Team Leadership</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Interests & Activities Section -->
+    <section class="section section-alt">
+        <div class="container">
+            <h2 class="section-title fade-in">Interests & Activities</h2>
+            <p class="section-subtitle fade-in">Personal passions and achievements</p>
+            
+            <div class="interests-list">
+                <div class="interest-item fade-in">🏃‍♂️ Athletics (Long Distance Running)</div>
+                <div class="interest-item fade-in">🚗 Automotive Tech & Performance</div>
+                <div class="interest-item fade-in">🏆 SOWETO CABAL 10KM Race Participant</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section contact">
+        <div class="container">
+            <h2 class="section-title fade-in">Get In Touch</h2>
+            <p class="section-subtitle fade-in">Ready to bring your idea into a digital experience? Let's collaborate.</p>
+            
+            <div class="contact-grid">
+                <div class="contact-item fade-in">
+                    <div class="contact-icon">✉️</div>
+                    <div class="contact-title">Email</div>
+                    <div class="contact-detail">nhlakzmukansi720@gmail.com</div>
+                </div>
+                
+                <div class="contact-item fade-in">
+                    <div class="contact-icon">📱</div>
+                    <div class="contact-title">Phone</div>
+                    <div class="contact-detail">066 405 4123</div>
+                </div>
+                
+                <div class="contact-item fade-in">
+                    <div class="contact-icon">📍</div>
+                    <div class="contact-title">Location</div>
+                    <div class="contact-detail">Johannesburg, South Africa</div>
+                </div>
+            </div>
+
+            <div class="cta-buttons fade-in">
+                <a href="mailto:nhlakzmukansi720@gmail.com" class="btn btn-primary">Send Email</a>
+                <a href="tel:+27664054123" class="btn btn-secondary">Call Now</a>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // Apple-style smooth scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    const offsetTop = target.offsetTop - 44; // Account for nav height
+                    window.scrollTo({
+                        top: offsetTop,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // Apple-style navigation scroll effect
+        let lastScrollTop = 0;
+        window.addEventListener('scroll', () => {
+            const nav = document.getElementById('nav');
+            const currentScrollTop = window.pageYOffset || document.documentElement.scrollTop;
+            
+            if (currentScrollTop > 100) {
+                nav.style.background = 'rgba(251, 251, 253, 0.9)';
+                nav.style.backdropFilter = 'saturate(180%) blur(20px)';
+            } else {
+                nav.style.background = 'rgba(251, 251, 253, 0.8)';
+                nav.style.backdropFilter = 'saturate(180%) blur(20px)';
+            }
+            
+            lastScrollTop = currentScrollTop <= 0 ? 0 : currentScrollTop;
+        });
+
+        // Intersection Observer for Apple-style animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach((entry, index) => {
+                if (entry.isIntersecting) {
+                    setTimeout(() => {
+                        entry.target.classList.add('visible');
+                    }, index * 100); // Staggered animation
+                }
+            });
+        }, observerOptions);
+
+        // Observe all elements with animation classes
+        document.querySelectorAll('.fade-in, .slide-in-left, .slide-in-right').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Mobile menu toggle - Apple style
+        const mobileMenu = document.querySelector('.mobile-menu');
+        const navLinks = document.querySelector('.nav-links');
+        let menuOpen = false;
+
+        mobileMenu.addEventListener('click', () => {
+            menuOpen = !menuOpen;
+            navLinks.classList.toggle('active');
+            
+            // Animate hamburger menu
+            const spans = mobileMenu.querySelectorAll('span');
+            if (menuOpen) {
+                spans[0].style.transform = 'rotate(-45deg) translate(-5px, 6px)';
+                spans[1].style.opacity = '0';
+                spans[2].style.transform = 'rotate(45deg) translate(-5px, -6px)';
+            } else {
+                spans[0].style.transform = 'none';
+                spans[1].style.opacity = '1';
+                spans[2].style.transform = 'none';
+            }
+        });
+
+        // Apple-style parallax effect for hero
+        window.addEventListener('scroll', () => {
+            const scrolled = window.pageYOffset;
+            const hero = document.querySelector('.hero');
+            const rate = scrolled * -0.3;
+            hero.style.transform = `translate3d(0, ${rate}px, 0)`;
+        });
+
+        // Enhanced hover effects for project cards - Apple style
+        document.querySelectorAll('.project-card').forEach(card => {
+            card.addEventListener('mouseenter', () => {
+                card.style.transform = 'translateY(-12px) scale(1.02)';
+                card.style.transition = 'all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94)';
+            });
+            
+            card.addEventListener('mouseleave', () => {
+                card.style.transform = 'translateY(0) scale(1)';
+            });
+        });
+
+        // Apple-style timeline item hover effects
+        document.querySelectorAll('.timeline-item').forEach(item => {
+            item.addEventListener('mouseenter', () => {
+                item.style.transform = 'translateY(-8px) scale(1.01)';
+                item.style.transition = 'all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94)';
+            });
+            
+            item.addEventListener('mouseleave', () => {
+                item.style.transform = 'translateY(0) scale(1)';
+            });
+        });
+
+        // Apple-style button interactions
+        document.querySelectorAll('.btn').forEach(btn => {
+            btn.addEventListener('mousedown', () => {
+                btn.style.transform = 'scale(0.96)';
+            });
+            
+            btn.addEventListener('mouseup', () => {
+                btn.style.transform = 'scale(1)';
+            });
+            
+            btn.addEventListener('mouseleave', () => {
+                btn.style.transform = 'scale(1)';
+            });
+        });
+
+        // Apple-style loading animation
+        window.addEventListener('load', () => {
+            document.body.style.opacity = '0';
+            document.body.style.transform = 'translateY(20px)';
+            
+            setTimeout(() => {
+                document.body.style.transition = 'all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94)';
+                document.body.style.opacity = '1';
+                document.body.style.transform = 'translateY(0)';
+            }, 100);
+        });
+
+        // Apple-style scroll progress indicator
+        const scrollProgress = document.createElement('div');
+        scrollProgress.style.cssText = `
+            position: fixed;
+            top: 44px;
+            left: 0;
+            width: 0%;
+            height: 2px;
+            background: linear-gradient(90deg, #007aff, #5856d6);
+            z-index: 1001;
+            transition: width 0.1s ease;
+        `;
+        document.body.appendChild(scrollProgress);
+
+        window.addEventListener('scroll', () => {
+            const scrollTop = window.pageYOffset;
+            const docHeight = document.body.offsetHeight;
+            const winHeight = window.innerHeight;
+            const scrollPercent = scrollTop / (docHeight - winHeight);
+            scrollProgress.style.width = (scrollPercent * 100) + '%';
+        });
+
+        // Apple-style focus management for accessibility
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Tab') {
+                document.body.classList.add('keyboard-navigation');
+            }
+        });
+
+        document.addEventListener('mousedown', () => {
+            document.body.classList.remove('keyboard-navigation');
+        });
+
+        // Add focus styles for keyboard navigation
+        const style = document.createElement('style');
+        style.textContent = `
+            .keyboard-navigation *:focus {
+                outline: 2px solid #007aff !important;
+                outline-offset: 2px !important;
+            }
+        `;
+        document.head.appendChild(style);
+    </script>
+</body>
+</html>
+                            
